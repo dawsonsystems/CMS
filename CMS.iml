@@ -30,6 +30,8 @@
       <sourceFolder url="file://$MODULE_DIR$/grails-app/taglib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/grails-app/jobs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/functional" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
       <excludeFolder url="file://$MODULE_DIR$/web-app/plugins" />
@@ -41,6 +43,8 @@
       <library name="Grails User Library (CMS)">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/com.thoughtworks.xstream/xstream/jars/xstream-1.2.1.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/net.java.dev.textile-j/textile-j/jars/textile-j-2.2.864.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -48,6 +52,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="CMS-grailsPlugins" />
+    <orderEntry type="module" module-name="weceem-inplacePlugin" exported="" />
   </component>
 </module>
 

@@ -2,6 +2,15 @@ grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
+
+if(System.getProperty('build')){
+	println "Running with installed plugins..."
+} else {
+	println "Running with inline plugins happily..."
+	grails.plugin.location.weceem="/home/david/Development/Source/opensource/weceem-plugin"
+}
+
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {

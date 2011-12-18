@@ -11,7 +11,7 @@
 // }
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
-grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
+grails.mime.file.extensions = false // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
 grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
                       xml: ['text/xml', 'application/xml'],
@@ -88,3 +88,14 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
+
+
+
+grails.app.context = '/'
+security.shiro.legacy.filter.enabled = true
+
+weceem.content.prefix = 'c'
+weceem.create.default.space = true
+weceem.default.space.template = "classpath:/org/weceem/resources/default-space-template.zip"
+
+weceem.upload.dir = 'file:///var/weceem/cms/uploads'
