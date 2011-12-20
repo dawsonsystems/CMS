@@ -7,7 +7,10 @@ import grails.util.Environment
 //                             "classpath:${appName}-config.groovy",
 //                             "file:${userHome}/.grails/${appName}-config.properties",
 //                             "file:${userHome}/.grails/${appName}-config.groovy"]
-grails.config.locations = ["file:/var/lib/tomcat7/conf/cms-datasource.groovy"]
+if (Environment.current == Environment.PRODUCTION) {
+  println "LOADING EXTERNAL CONFIG FOR DATASOURCE"
+  grails.config.locations = ["file:/var/lib/tomcat7/conf/cms-datasource.groovy"]
+}
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = false // enables the parsing of file extensions from URLs into the request format
