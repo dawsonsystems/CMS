@@ -9,7 +9,7 @@ import grails.util.Environment
 //                             "file:${userHome}/.grails/${appName}-config.groovy"]
 
 if (Environment.current == Environment.PRODUCTION) {
-    grails.config.locations << ["file:/var/lib/tomcat7/conf/cms-datasource.groovy"]
+    grails.config.locations = ["file:/var/lib/tomcat7/conf/cms-datasource.groovy"]
 }
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
