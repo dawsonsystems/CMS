@@ -10,7 +10,7 @@ class DomainFilters {
     all(uri: ALL_EXCEPT_ADMIN, invert:true) {
       before = {
         def requestedName = request.getHeader('X-Real-Host')
-        println "Requested domain : $requestedName"
+        println "Requested X-Real-Host : $requestedName"
         request.space = WcmSpace.findByAliasURI(requestedName,[cache:true])
       }
     }
