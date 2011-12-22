@@ -32,6 +32,7 @@
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/jobs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/functional" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/grails-app/realms" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
       <excludeFolder url="file://$MODULE_DIR$/web-app/plugins" />
@@ -45,6 +46,17 @@
           <root url="file://$MODULE_DIR$/lib" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.thoughtworks.xstream/xstream/jars/xstream-1.2.1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/net.java.dev.textile-j/textile-j/jars/textile-j-2.2.864.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-spring/bundles/shiro-spring-1.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.opensymphony.quartz/quartz/jars/quartz-1.6.1.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-quartz/bundles/shiro-quartz-1.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-ehcache/bundles/shiro-ehcache-1.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-web/bundles/shiro-web-1.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.8.3.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-core/bundles/shiro-core-1.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/javax.activation/activation/jars/activation-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/javax.mail/mail/jars/mail-1.4.3.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework/spring-test/jars/spring-test-3.1.0.RELEASE.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.13.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
