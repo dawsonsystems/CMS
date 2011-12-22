@@ -1,3 +1,4 @@
+package cms
 class ShiroRole {
   String name
   String description

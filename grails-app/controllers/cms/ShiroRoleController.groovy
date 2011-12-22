@@ -26,14 +26,14 @@ class ShiroRoleController {
       return
     }
 
-    flash.message = message(code: 'default.created.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), shiroRoleInstance.id])
+    flash.message = message(code: 'default.created.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), shiroRoleInstance.id])
     redirect(action: "show", id: shiroRoleInstance.id)
   }
 
   def show = {
     def shiroRoleInstance = ShiroRole.get(params.id)
     if (!shiroRoleInstance) {
-      flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
+      flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), params.id])
       redirect(action: "list")
       return
     }
@@ -44,7 +44,7 @@ class ShiroRoleController {
   def edit = {
     def shiroRoleInstance = ShiroRole.get(params.id)
     if (!shiroRoleInstance) {
-      flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
+      flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), params.id])
       redirect(action: "list")
       return
     }
@@ -55,7 +55,7 @@ class ShiroRoleController {
   def update = {
     def shiroRoleInstance = ShiroRole.get(params.id)
     if (!shiroRoleInstance) {
-      flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
+      flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), params.id])
       redirect(action: "list")
       return
     }
@@ -64,8 +64,8 @@ class ShiroRoleController {
       def version = params.version.toLong()
       if (shiroRoleInstance.version > version) {
         shiroRoleInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                [message(code: 'shiroRole.label', default: 'ShiroRole')] as Object[],
-                "Another user has updated this ShiroRole while you were editing")
+                [message(code: 'shiroRole.label', default: 'cms.ShiroRole')] as Object[],
+                "Another user has updated this cms.ShiroRole while you were editing")
         render(view: "edit", model: [shiroRoleInstance: shiroRoleInstance])
         return
       }
@@ -78,25 +78,25 @@ class ShiroRoleController {
       return
     }
 
-    flash.message = message(code: 'default.updated.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), shiroRoleInstance.id])
+    flash.message = message(code: 'default.updated.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), shiroRoleInstance.id])
     redirect(action: "show", id: shiroRoleInstance.id)
   }
 
   def delete = {
     def shiroRoleInstance = ShiroRole.get(params.id)
     if (!shiroRoleInstance) {
-      flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
+      flash.message = message(code: 'default.not.found.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), params.id])
       redirect(action: "list")
       return
     }
 
     try {
       shiroRoleInstance.delete(flush: true)
-      flash.message = message(code: 'default.deleted.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
+      flash.message = message(code: 'default.deleted.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), params.id])
       redirect(action: "list")
     }
     catch (DataIntegrityViolationException e) {
-      flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'shiroRole.label', default: 'ShiroRole'), params.id])
+      flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), params.id])
       redirect(action: "show", id: params.id)
     }
   }

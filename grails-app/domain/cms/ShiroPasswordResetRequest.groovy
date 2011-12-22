@@ -1,3 +1,5 @@
+package cms
+
 import java.security.SecureRandom
 
 class ShiroPasswordResetRequest {

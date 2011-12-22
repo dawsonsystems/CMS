@@ -1,3 +1,4 @@
+package cms
 class ShiroUser {
   String firstName
   String lastName

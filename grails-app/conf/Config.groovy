@@ -101,3 +101,5 @@ weceem.create.default.space = true
 weceem.default.space.template = "classpath:/org/weceem/resources/default-space-template.zip"
 
 weceem.upload.dir = 'file:///var/weceem/cms/uploads'
+weceem.profile.url = [controller:'shiroUser', action:'showCurrent']
+weceem.logout.url = [controller:'auth', action:'signOut']

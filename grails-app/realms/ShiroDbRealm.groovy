@@ -2,7 +2,8 @@ import org.apache.shiro.authc.AccountException
 import org.apache.shiro.authc.IncorrectCredentialsException
 import org.apache.shiro.authc.UnknownAccountException
 import org.apache.shiro.authc.SimpleAccount
-import org.apache.shiro.authz.permission.WildcardPermission
+
+import cms.ShiroUser
 
 class ShiroDbRealm {
   static authTokenClass = org.apache.shiro.authc.UsernamePasswordToken
@@ -97,7 +98,7 @@ class ShiroDbRealm {
     // If not, does he gain it through a role?
     //
     // Get the permissions from the roles that the user does have.
-    def results = ShiroUser.executeQuery("select distinct p from ShiroUser as user join user.roles as role join role.permissions as p where user.username = '$principal'")
+    def results = ShiroUser.executeQuery("select distinct p from cms.ShiroUser as user join user.roles as role join role.permissions as p where user.username = '$principal'")
 
     // There may be some duplicate entries in the results, but
     // at this stage it is not worth trying to remove them. Now,
