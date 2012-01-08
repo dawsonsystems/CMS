@@ -33,7 +33,7 @@ class BootStrap {
           return ["ROLE_ADMIN"]
         },
         getUserPrincipal : { ->
-          return SecurityUtils.subject.principal
+          return SecurityUtils.subject.principal ?: [:]
         }
       ]
     }
