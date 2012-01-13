@@ -1,0 +1,20 @@
+<module rename-to="stock">
+    <!-- Inherit the core Web Toolkit stuff.                  -->
+    <inherits name="com.google.gwt.user.User"/>
+    <inherits name="com.google.gwt.inject.Inject"/>
+    <inherits name='com.extjs.gxt.ui.GXT'/>
+    <inherits name='com.extjs.gxt.themes.Themes'/>
+    <inherits name='grails.plugins.Dto'/>
+    <inherits name='gxt.multiupload.MultiUpload'/>
+
+    <inherits name='uk.co.devooght.module'/>
+
+    <!--<source path="client/gin"/>-->
+    <source path="view"/>
+    <source path="root"/>
+    <source path="gin"/>
+    <source path="control"/>
+
+    <!-- Specify the module entry point class.                   -->
+    <entry-point class="uk.co.devooght.stock.client.root.StockEntryPoint"/>
+</module>

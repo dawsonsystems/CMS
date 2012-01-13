@@ -57,12 +57,43 @@ grails.exceptionresolver.params.exclude = ['password']
 environments {
     production {
         grails.serverURL = "http://www.changeme.com"
+        facebook.applicationSecret='885b021c48db10af1ecf3a677f68f5f6'
+        facebook.applicationId='178108312278602'
+
+        google.checkout.id ="107938670551073"
+        google.checkout.key="1-c-yS2Mny74EQiaSEboag"
+        google.checkout.url="https://107938670551073:1-c-yS2Mny74EQiaSEboag@checkout.google.com/api/checkout/v2/merchantCheckout/Merchant/107938670551073"
+
+        grails.config.locations = ["file:/var/lib/tomcat7/devooght_datasource.groovy"]
+
+        images {
+          serverPath = "/productimages"
+          localPath = "/var/www/productimages"
+        }
     }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
+        facebook.applicationSecret='2d8b1986ae2ba72eb031cf007721ffdb'
+        facebook.applicationId='132485503525317'
+        google.checkout.id ="574285241000846"
+        google.checkout.key="-tyn-X4ISRyFc-YgkbWwTQ"
+        google.checkout.url="https://574285241000846:-tyn-X4ISRyFc-YgkbWwTQ@sandbox.google.com/checkout/api/checkout/v2/merchantCheckout/Merchant/574285241000846"
+        images {
+          serverPath = "/devooght/images/products"
+          localPath = "/home/david/Development/Source/commercial/dawsonsystems/devooght/web-app/images/products"
+        }
     }
     test {
         grails.serverURL = "http://localhost:8080/${appName}"
+        facebook.applicationSecret='2d8b1986ae2ba72eb031cf007721ffdb'
+        facebook.applicationId='132485503525317'
+        google.checkout.id ="574285241000846"
+        google.checkout.key="-tyn-X4ISRyFc-YgkbWwTQ"
+        google.checkout.url="https://574285241000846:-tyn-X4ISRyFc-YgkbWwTQ@sandbox.google.com/checkout/api/checkout/v2/merchantCheckout/Merchant/574285241000846"
+        images {
+          serverPath = "/devooght/images/products"
+          localPath = "/home/david/Development/Source/commercial/dawsonsystems/devooght/web-app/images/products"
+        }
     }
 
 }
@@ -98,7 +129,8 @@ security.shiro.legacy.filter.enabled = true
 
 weceem.content.prefix = 'c'
 weceem.create.default.space = true
-weceem.default.space.template = "classpath:/org/weceem/resources/default-space-template.zip"
+//weceem.default.space.template = "classpath:/org/weceem/resources/default-space-template.zip"
+weceem.default.space.template = "classpath:/shop-space.zip"
 
 weceem.upload.dir = 'file:///var/weceem/cms/uploads'
 weceem.profile.url = [controller:'shiroUser', action:'showCurrent']

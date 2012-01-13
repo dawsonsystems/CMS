@@ -10,7 +10,7 @@ class ShiroRoleController {
     redirect(action: "list", params: params)
   }
 
-  def list = {
+ /* def list = {
     params.max = Math.min(params.max ? params.int('max') : 10, 100)
     [shiroRoleInstanceList: ShiroRole.list(params), shiroRoleInstanceTotal: ShiroRole.count()]
   }
@@ -99,5 +99,5 @@ class ShiroRoleController {
       flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'shiroRole.label', default: 'cms.ShiroRole'), params.id])
       redirect(action: "show", id: params.id)
     }
-  }
+  }       */
 }

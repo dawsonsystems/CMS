@@ -12,7 +12,7 @@ class ShiroUserController {
     redirect(action: "list", params: params)
   }
 
-  def list = {
+  /*def list = {
     params.max = Math.min(params.max ? params.int('max') : 10, 100)
     [shiroUserInstanceList: ShiroUser.list(params), shiroUserInstanceTotal: ShiroUser.count()]
   }
@@ -126,5 +126,5 @@ class ShiroUserController {
       flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'shiroUser.label', default: 'cms.ShiroUser'), params.id])
       redirect(action: "show", id: params.id)
     }
-  }
+  } */
 }

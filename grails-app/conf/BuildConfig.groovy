@@ -7,9 +7,16 @@ if(System.getProperty('build')){
 	println "Running with installed plugins..."
 } else {
 	println "Running with inline plugins happily..."
+  grails.plugin.location.gwt="/home/david/Development/Source/opensource/grails-gwt"
 	grails.plugin.location.weceem="/home/david/Development/Source/opensource/weceem-plugin"
 }
 
+gwt {
+  version="2.4.0"
+  gin.version="1.5.0"
+  dependencies=['com.dawsonsystems:gxt:2.2.5-gwt22','com.dawsonsystems:gxt-multi-upload:0.1']
+  //output.path="${basedir}/web-app"
+}
 
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
@@ -23,18 +30,16 @@ grails.project.dependency.resolution = {
         grailsHome()
         grailsCentral()
 
-        // uncomment the below to enable remote dependency resolution
-        // from public Maven repositories
-        //mavenLocal()
         mavenCentral()
-        //mavenRepo "http://snapshots.repository.codehaus.org"
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "https://github.com/dawsonsystems/mavenrepo/raw/master/snapshots"
     }
     dependencies {
-        // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
-
-        runtime 'mysql:mysql-connector-java:5.1.13'
+      compile 'mysql:mysql-connector-java:5.1.18'
+      compile 'com.google.inject:guice:3.0'
+      compile 'org.apache.commons:commons-lang3:3.1'
+        // runtime 'mysql:mysql-connector-java:5.1.13'
+//      compile ('org.openid4java:openid4java:0.9.6') {
+//        excludes 'xml-apis', "guice"
+//      }
     }
 }

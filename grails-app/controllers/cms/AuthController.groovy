@@ -41,14 +41,8 @@ class AuthController {
       // will be thrown if the username is unrecognised or the
       // password is incorrect.
       SecurityUtils.subject.login(authToken)
-      def user = ShiroUser.findByUsername(params.username)
-      if (user?.passwordChangeRequiredOnNextLogon) {
-        log.info "Redirecting to '${targetUri}'."
-        redirect(action: newPassword)
-      } else {
-        log.info "Redirecting to '${targetUri}'."
-        redirect(uri: targetUri)
-      }
+      log.info "Redirecting to '${targetUri}'."
+      redirect(uri: targetUri)
     }
     catch (AuthenticationException ex) {
       // Authentication failed, so display the appropriate message
@@ -92,7 +86,7 @@ class AuthController {
     render(view: 'resetPassword')
   }
   def doResetPassword = {
-    if (params.password1 != params.password2) {
+    /*if (params.password1 != params.password2) {
       flash.message = "Please enter same passwords."
       flash.status = "error"
       redirect(action: 'resetPassword', id: params.token)
@@ -113,10 +107,10 @@ class AuthController {
         flash.message = "Unknown user"
         redirect(action: 'resetPassword', id: params.token)
       }
-    }
+    } */
   }
   def doUpdatePassword = {
-    if (params.password1 != params.password2) {
+    /*if (params.password1 != params.password2) {
       flash.message = "Please enter same passwords."
       flash.status = "error"
       redirect(action: 'updatePassword')
@@ -143,10 +137,10 @@ class AuthController {
         flash.status = "error"
         redirect(action: 'updatePassword')
       }
-    }
+    }     */
   }
   def resetPassword = {
-    if (params.id) {
+    /*if (params.id) {
       def resetRequest = ShiroPasswordResetRequest.findByToken(params.id)
       if (resetRequest) {
         [resetRequest: resetRequest]
@@ -154,10 +148,10 @@ class AuthController {
         flash.message = "Not a valid request."
         redirect(uri: '/')
       }
-    }
+    }  */
   }
   def sendPasswordResetRequest = {
-    def shiroUserInstance = (params.email ? ShiroUser.findByEmail(params.email) : (params.username ? ShiroUser.findByUsername(params.username) : null))
+    /*def shiroUserInstance = (params.email ? ShiroUser.findByEmail(params.email) : (params.username ? ShiroUser.findByUsername(params.username) : null))
     if (shiroUserInstance) {
       flash.message = "An email is being sent to you with instructions on how to reset your password."
       def resetRequest = new ShiroPasswordResetRequest(user: shiroUserInstance, requestDate: new Date(), token: new BigInteger(130, new SecureRandom()).toString(32)).save(failOnError: true)
@@ -171,6 +165,6 @@ class AuthController {
     } else {
       flash.message = "No such user, please try again."
     }
-    redirect(uri: '/')
+    redirect(uri: '/')*/
   }
 }
