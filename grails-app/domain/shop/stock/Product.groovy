@@ -37,6 +37,6 @@ class Product {
     shape nullable:true
     pattern nullable:true
     altMaterial nullable: true
-    copyText nullable:true., blank:true
+    copyText nullable:true, blank:true
   }
 }
