@@ -37,6 +37,7 @@ grails.project.dependency.resolution = {
       compile 'mysql:mysql-connector-java:5.1.18'
       compile 'com.google.inject:guice:3.0'
       compile 'org.apache.commons:commons-lang3:3.1'
+      compile 'com.dawsonsystems:gxt:2.2.5-gwt22'
         // runtime 'mysql:mysql-connector-java:5.1.13'
 //      compile ('org.openid4java:openid4java:0.9.6') {
 //        excludes 'xml-apis', "guice"
