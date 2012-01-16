@@ -1,4 +1,3 @@
-<%@ page import="uk.co.devooght.stock.Product" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
