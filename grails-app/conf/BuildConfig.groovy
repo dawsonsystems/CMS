@@ -12,7 +12,7 @@ if(System.getProperty('build')){
 }
 
 gwt {
-  version="2.4.0"
+  version="2.3.0"
   gin.version="1.5.0"
   dependencies=['com.dawsonsystems:gxt:2.2.5-gwt22','com.dawsonsystems:gxt-multi-upload:0.1']
   //output.path="${basedir}/web-app"

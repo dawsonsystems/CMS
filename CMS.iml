@@ -71,9 +71,6 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-3.0.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt.inject/gin/jars/gin-1.5.0.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.0.0.GA.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-servlet/jars/gwt-servlet-2.4.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-user/jars/gwt-user-2.4.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-dev/jars/gwt-dev-2.4.0.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.dozer/dozer/jars/dozer-5.1.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.gmock/gmock/jars/gmock-0.8.0.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/xml-resolver/xml-resolver/jars/xml-resolver-1.2.jar!/" />
@@ -81,6 +78,9 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.ezmorph/ezmorph/jars/ezmorph-1.0.6.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.json-lib/json-lib/jars/json-lib-2.3-jdk15.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy.modules.http-builder/http-builder/jars/http-builder-0.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-servlet/jars/gwt-servlet-2.3.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-user/jars/gwt-user-2.3.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-dev/jars/gwt-dev-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
@@ -89,9 +89,9 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/com.dawsonsystems/gxt/sources/gxt-2.2.5-gwt22-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/javax.inject/javax.inject/sources/javax.inject-1-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt.inject/gin/sources/gin-1.5.0-sources.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-servlet/sources/gwt-servlet-2.4.0-sources.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-user/sources/gwt-user-2.4.0-sources.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-dev/sources/gwt-dev-2.4.0-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-servlet/sources/gwt-servlet-2.3.0-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-user/sources/gwt-user-2.3.0-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-dev/sources/gwt-dev-2.3.0-sources.jar!/" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
