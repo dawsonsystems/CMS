@@ -1,16 +1,3 @@
-import grails.util.Environment
-
-// locations to search for config files that get merged into the main config
-// config files can either be Java properties files or ConfigSlurper scripts
-
-// grails.config.locations = [ "classpath:${appName}-config.properties",
-//                             "classpath:${appName}-config.groovy",
-//                             "file:${userHome}/.grails/${appName}-config.properties",
-//                             "file:${userHome}/.grails/${appName}-config.groovy"]
-if (Environment.current == Environment.PRODUCTION) {
-  println "LOADING EXTERNAL CONFIG FOR DATASOURCE"
-  grails.config.locations = ["file:/var/lib/tomcat7/conf/cms-datasource.groovy"]
-}
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = false // enables the parsing of file extensions from URLs into the request format
@@ -64,7 +51,7 @@ environments {
         google.checkout.key="1-c-yS2Mny74EQiaSEboag"
         google.checkout.url="https://107938670551073:1-c-yS2Mny74EQiaSEboag@checkout.google.com/api/checkout/v2/merchantCheckout/Merchant/107938670551073"
 
-        grails.config.locations = ["file:/var/lib/tomcat7/devooght_datasource.groovy"]
+        grails.config.locations = ["file:/var/lib/tomcat7/conf/cms-datasource.groovy"]
 
         images {
           serverPath = "/productimages"
@@ -79,8 +66,8 @@ environments {
         google.checkout.key="-tyn-X4ISRyFc-YgkbWwTQ"
         google.checkout.url="https://574285241000846:-tyn-X4ISRyFc-YgkbWwTQ@sandbox.google.com/checkout/api/checkout/v2/merchantCheckout/Merchant/574285241000846"
         images {
-          serverPath = "/devooght/images/products"
-          localPath = "/home/david/Development/Source/commercial/dawsonsystems/devooght/web-app/images/products"
+          serverPath = "/images/products"
+          localPath = "/home/david/Development/Source/commercial/dawsonsystems/CMS/web-app/images/products"
         }
     }
     test {
@@ -91,8 +78,8 @@ environments {
         google.checkout.key="-tyn-X4ISRyFc-YgkbWwTQ"
         google.checkout.url="https://574285241000846:-tyn-X4ISRyFc-YgkbWwTQ@sandbox.google.com/checkout/api/checkout/v2/merchantCheckout/Merchant/574285241000846"
         images {
-          serverPath = "/devooght/images/products"
-          localPath = "/home/david/Development/Source/commercial/dawsonsystems/devooght/web-app/images/products"
+          serverPath = "/images/products"
+          localPath = "/home/david/Development/Source/commercial/dawsonsystems/CMS/web-app/images/products"
         }
     }
 
