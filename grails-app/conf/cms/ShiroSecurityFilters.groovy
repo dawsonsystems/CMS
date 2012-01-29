@@ -14,7 +14,7 @@ class ShiroSecurityFilters {
         accessControl()
       }
     }
-    stockAdmin(uri: "/stock/**") {
+    /*stockAdmin(uri: "/stock/**") {
       before = {
         // Ignore direct views (e.g. the default main index page).
         if (!controllerName) return true
@@ -22,6 +22,6 @@ class ShiroSecurityFilters {
         // Access control by convention.
         accessControl()
       }
-    }
+    }*/
   }
 }
