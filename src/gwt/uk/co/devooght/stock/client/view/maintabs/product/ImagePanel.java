@@ -94,7 +94,7 @@ public class ImagePanel extends ContentPanel {
         grid.getView().setShowDirtyCells(false);
 
         final MultiUploadView view = new MultiUploadView(grid);
-        view.getFormPanel().setAction("/devooght/stock/upload?productId="+product.getId());
+        view.getFormPanel().setAction("stock/upload?productId="+product.getId());
         MultiUploadPresenter presenter = new MultiUploadPresenter(view);
         presenter.go();
       }
