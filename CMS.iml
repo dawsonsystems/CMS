@@ -44,43 +44,36 @@
       <library name="Grails User Library (CMS)">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.thoughtworks.xstream/xstream/jars/xstream-1.2.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.java.dev.textile-j/textile-j/jars/textile-j-2.2.864.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-spring/bundles/shiro-spring-1.1.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.opensymphony.quartz/quartz/jars/quartz-1.6.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-quartz/bundles/shiro-quartz-1.1.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-ehcache/bundles/shiro-ehcache-1.1.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-web/bundles/shiro-web-1.1.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.8.3.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.shiro/shiro-core/bundles/shiro-core-1.1.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/javax.activation/activation/jars/activation-1.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/javax.mail/mail/jars/mail-1.4.3.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.springframework/spring-test/jars/spring-test-3.1.0.RELEASE.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/asm/asm/jars/asm-3.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.sonatype.sisu.inject/cglib/jars/cglib-2.2.1-v20090111.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.inject/guice/jars/guice-3.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.18.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.3.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.3.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.dawsonsystems/gxt-multi-upload/jars/gxt-multi-upload-0.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.dawsonsystems/gxt/jars/gxt-2.2.5-gwt22.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-3.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt.inject/gin/jars/gin-1.5.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.0.0.GA.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.dozer/dozer/jars/dozer-5.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.gmock/gmock/jars/gmock-0.8.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/xml-resolver/xml-resolver/jars/xml-resolver-1.2.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.sourceforge.nekohtml/nekohtml/jars/nekohtml-1.9.9.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.ezmorph/ezmorph/jars/ezmorph-1.0.6.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/net.sf.json-lib/json-lib/jars/json-lib-2.3-jdk15.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/org.codehaus.groovy.modules.http-builder/http-builder/jars/http-builder-0.5.1.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-servlet/jars/gwt-servlet-2.3.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-user/jars/gwt-user-2.3.0.jar!/" />
-          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-dev/jars/gwt-dev-2.3.0.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.dawsonsystems/gxt-multi-upload/jars/gxt-multi-upload-0.1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.dawsonsystems/gxt/jars/gxt-2.2.5-gwt22.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.google.inject.extensions/guice-assistedinject/jars/guice-assistedinject-3.0.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.google.inject/guice/jars/guice-3.0.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.google.gwt.inject/gin/jars/gin-1.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/javax.validation/validation-api/jars/validation-api-1.0.0.GA.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.google.gwt/gwt-servlet/jars/gwt-servlet-2.3.0.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.google.gwt/gwt-user/jars/gwt-user-2.3.0.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.google.gwt/gwt-dev/jars/gwt-dev-2.3.0.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/com.thoughtworks.xstream/xstream/jars/xstream-1.2.1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/net.java.dev.textile-j/textile-j/jars/textile-j-2.2.864.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/xml-resolver/xml-resolver/jars/xml-resolver-1.2.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/xerces/xercesImpl/jars/xercesImpl-2.8.1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/net.sourceforge.nekohtml/nekohtml/jars/nekohtml-1.9.9.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/net.sf.ezmorph/ezmorph/jars/ezmorph-1.0.6.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/net.sf.json-lib/json-lib/jars/json-lib-2.3-jdk15.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.3.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/org.codehaus.groovy.modules.http-builder/http-builder/jars/http-builder-0.5.1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/javax.activation/activation/jars/activation-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/javax.mail/mail/jars/mail-1.4.3.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/asm/asm/jars/asm-3.1.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/org.sonatype.sisu.inject/cglib/jars/cglib-2.2.1-v20090111.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.18.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/org.springframework/spring-test/jars/spring-test-3.1.0.RELEASE.jar!/" />
+          <root url="file://$USER_HOME_GRAILS$/1.3.7/projects/CMS/gwtclasses" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/commons-codec/commons-codec/jars/commons-codec-1.3.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
@@ -92,6 +85,8 @@
           <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-servlet/sources/gwt-servlet-2.3.0-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-user/sources/gwt-user-2.3.0-sources.jar!/" />
           <root url="jar://$USER_HOME$/.ivy2/cache/com.google.gwt/gwt-dev/sources/gwt-dev-2.3.0-sources.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/javax.validation/validation-api/sources/validation-api-1.0.0.GA-sources.jar!/" />
+          <root url="jar://$USER_HOME$/wibblecache2/cache/javax.validation/validation-api/sources/validation-api-1.0.0.GA-sources.jar!/" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>

@@ -12,7 +12,9 @@ import cms.Logon
 
 class BootStrap {
 
-    def init = { servletContext ->
+  def wcmContentRepositoryService
+
+  def init = { servletContext ->
       ApplicationContext context = servletContext.getAttribute(GrailsApplicationAttributes.APPLICATION_CONTEXT)
 
       maybeSetupSecurityInfo()
@@ -23,10 +25,16 @@ class BootStrap {
 
       context.wcmSecurityService.securityDelegate = [
         getUserName : { ->
-          return SecurityUtils.subject.principal
+          if (SecurityUtils.subject?.principal) {
+            return Logon.findByIdentifier(SecurityUtils.subject.principal)?.profile?.displayName
+          }
+          return ""
         },
         getUserEmail : { ->
-          return Logon.findByIdentifier(SecurityUtils.subject.principal)?.profile.email
+          if (SecurityUtils.subject?.principal) {
+            return Logon.findByIdentifier(SecurityUtils.subject.principal)?.profile?.email
+          }
+          return ""
         },
         getUserRoles : { ->
           return ["ROLE_ADMIN"]
@@ -79,6 +87,23 @@ class BootStrap {
     }
 
     def maybeSetupSecurityInfo() {
+
+      if (!Role.findByName("editor")) {
+        Role userRole = new Role(name:"editor")
+        userRole.addToPermissions("profile:showCurrent")
+        userRole.addToPermissions("wcmRepository:*")
+        userRole.save()
+
+        //make a profile
+        Profile profile = new Profile(displayName:"Some User", email:"someone@c.com")
+        profile.addToRoles(userRole)
+        profile.addToPermittedSpaces(wcmContentRepositoryService.findDefaultSpace())
+        profile = profile.save(flush:true, failOnError:true)
+
+        new LocalLogon(identifier:profile.email, passwordHash: new Sha256Hash("examplepass").toHex(), profile: profile).save(flush:true, failOnError:true)
+
+      }
+
       if (!Role.findByName("admin")) {
         log.info("Generating Admin Role")
         Role userRole = new Role(name:"admin")
@@ -90,7 +115,7 @@ class BootStrap {
         profile.addToRoles(userRole)
         profile = profile.save(flush:true, failOnError:true)
 
-        new LocalLogon(identifier:"david.dawson@dawsonsystems.com", passwordHash: new Sha256Hash("examplepass").toHex(), profile: profile).save(flush:true, failOnError:true)
+        new LocalLogon(identifier:profile.email, passwordHash: new Sha256Hash("examplepass").toHex(), profile: profile).save(flush:true, failOnError:true)
       }
     }
 

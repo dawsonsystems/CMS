@@ -7,6 +7,7 @@ import org.apache.shiro.authc.UsernamePasswordToken
 import org.apache.shiro.web.util.WebUtils
 import java.security.SecureRandom
 import org.apache.shiro.crypto.hash.Sha256Hash
+import javax.servlet.http.HttpServletResponse
 
 class AuthController {
   def shiroSecurityManager
@@ -76,7 +77,7 @@ class AuthController {
   }
 
   def unauthorized = {
-    render "You do not have permission to access this page."
+    response.status = HttpServletResponse.SC_FORBIDDEN
   }
   def lostPassword = {
   }

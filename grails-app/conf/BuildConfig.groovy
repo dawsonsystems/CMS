@@ -1,3 +1,7 @@
+System.setProperty("ivy.default.ivy.user.dir", "/home/david/wibblecache2")
+dependencyManager.ivySettings.defaultCache = new File("/home/david/wibblecache")
+
+
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"

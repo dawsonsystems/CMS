@@ -4,6 +4,7 @@ import java.text.NumberFormat
 import uk.co.devooght.UrlSanitizer
 import shop.stock.Product
 import shop.stock.ProductImage
+import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
 class ShopTagLib {
   static namespace = "shop"
@@ -35,6 +36,8 @@ class ShopTagLib {
 
     if (image) {
       out << image.location
+    } else {
+      out << ConfigurationHolder.config.images.noImageAvailableLocation
     }
   }
 

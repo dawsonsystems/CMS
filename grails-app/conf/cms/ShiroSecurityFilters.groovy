@@ -7,21 +7,18 @@ class ShiroSecurityFilters {
   def filters = {
     cmsAdmin(uri: "/wcm/admin/**") {
       before = {
-        // Ignore direct views (e.g. the default main index page).
-        if (!controllerName) return true
-
-        // Access control by convention.
         accessControl()
       }
     }
-    /*stockAdmin(uri: "/stock/**") {
+    profiles(uri: "/profile/**") {
       before = {
-        // Ignore direct views (e.g. the default main index page).
-        if (!controllerName) return true
-
-        // Access control by convention.
         accessControl()
       }
-    }*/
+    }
+    stockAdmin(uri: "/stock/**") {
+      before = {
+        accessControl()
+      }
+    }
   }
 }

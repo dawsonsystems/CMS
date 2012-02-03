@@ -94,7 +94,9 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
-    error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
+  info 'cms', 'shop', 'uk.co.devooght'
+
+  error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP
            'org.codehaus.groovy.grails.web.sitemesh', //  layouts
            'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
@@ -120,5 +122,5 @@ weceem.create.default.space = true
 weceem.default.space.template = "classpath:/shop-space.zip"
 
 weceem.upload.dir = 'file:///var/weceem/cms/uploads'
-weceem.profile.url = [controller:'shiroUser', action:'showCurrent']
+weceem.profile.url = [controller:'profile', action:'showCurrent']
 weceem.logout.url = [controller:'auth', action:'signOut']
