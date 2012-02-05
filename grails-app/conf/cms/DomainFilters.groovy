@@ -36,8 +36,18 @@ class DomainFilters implements ApplicationContextAware {
     ensureSelectedSpaceIsAuthorised(uri:WCM_ADMIN) {
       before = {
 
-        if (params.space) {
+        if (params.space && params.space instanceof String) {
           def space = WcmSpace.findByName(params.space)
+          if (space && SecurityUtils.subject.isPermitted("space:${space.aliasURI}")) {
+            request.space = space
+            return
+          }
+          if (space) {
+            flash.error="You are not authorised to view the space ${space.aliasURI}"
+          }
+        }
+        if (params.space?.id) {
+          def space = WcmSpace.findById(params.space.id)
           if (space && SecurityUtils.subject.isPermitted("space:${space.aliasURI}")) {
             request.space = space
             return
