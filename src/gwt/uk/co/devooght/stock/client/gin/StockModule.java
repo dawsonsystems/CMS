@@ -7,11 +7,6 @@ import uk.co.devooght.stock.client.control.*;
 import uk.co.devooght.stock.client.view.*;
 
 public class StockModule extends AbstractGinModule {
-
-  static {
-    System.out.println("WOOT");
-  }
-
     @Override
     protected void configure() {
 //        bind()

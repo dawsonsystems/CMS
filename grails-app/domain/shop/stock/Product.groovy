@@ -21,7 +21,10 @@ class Product {
 
   Sku bestSku() {
     if (skus) {
-      return skus.iterator().next()
+      return skus.find {
+        //TODO, include a price check (ie, lowest price that is available)
+        it.inventoryLevel > 0
+      }
     }
     return null
   }

@@ -65,7 +65,7 @@ public class SkuPanel extends ContentPanel {
         sku.setPrice(0.00);
         sku.setStockCode(product.getProductCode() + "-1");
 
-        BeanModelFactory factory = BeanModelLookup.get().getFactory(ProductDTO.class);
+        BeanModelFactory factory = BeanModelLookup.get().getFactory(SkuDTO.class);
 
         BeanModel model = factory.createModel(sku);
         grid.stopEditing();

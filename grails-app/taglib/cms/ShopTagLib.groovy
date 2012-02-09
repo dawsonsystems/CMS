@@ -30,15 +30,28 @@ class ShopTagLib {
   }
 
   def productImageUrl = { attrs ->
+    String size = attrs.size
+
     Product product = attrs.product
+
+    if (!product && attrs.productCode) {
+      product = Product.findByProductCode(attrs.productCode)
+    }
 
     def image = ProductImage.findByProduct(product)
 
     if (image) {
-      out << image.location
+      out << getProductImageUrlForSize(image, size)
     } else {
       out << ConfigurationHolder.config.images.noImageAvailableLocation
     }
+  }
+
+  def getProductImageUrlForSize(ProductImage image, size) {
+
+    def imageName = new File(image.location).name
+
+    return "${ConfigurationHolder.config.images.serverPath}/${size}/${imageName}"
   }
 
   def addToBasketUrl = { attrs ->
@@ -50,5 +63,32 @@ class ShopTagLib {
     def sku = attrs.sku
 
   }
+
+    def wcmRenderEngine
+    def wcmContentRepositoryService
+
+    def render = { attrs ->
+      println "WIBBLE!!!"
+        def path = attrs.path
+        if (!path) {
+            throwTagError "No [path] attribute supplied to wcm:render tag. Specify the Weceem content URI that you wish to render"
+        }
+
+        def space = request.space
+
+        def uriInfo = wcmContentRepositoryService.resolveSpaceAndURI(path)
+        if (!space) {
+          space = uriInfo.space
+        }
+      println "THE SPACE IS ${space}"
+        // @todo enhance the logic to work same as WcmContentController
+        def node = wcmContentRepositoryService.findContentForPath(uriInfo.uri, space)
+        if (node) {
+            // @todo Should verify it is embeddable content type here i.e. images/downloads can't embed!
+            out << g.include(controller:'wcmContent', action:'show', params:[uri:path])
+        } else {
+            out << "Content not found at [${path}]"
+        }
+    }
 
 }
