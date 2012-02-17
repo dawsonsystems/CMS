@@ -21,9 +21,17 @@ class Product {
 
   Sku bestSku() {
     if (skus) {
-      return skus.find {
-        //TODO, include a price check (ie, lowest price that is available)
+      def skuWithInventory = skus.findAll {
         it.inventoryLevel > 0
+      }
+      if (skuWithInventory) {
+        return skuWithInventory.min { Sku sku ->
+          sku.price
+        }
+      }
+      //no inventory.. show the highest price we've charged in the past?
+      return skus.max {
+        it.price
       }
     }
     return null
