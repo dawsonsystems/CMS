@@ -84,7 +84,7 @@
                         <label for="roles"><g:message code="profile.roles.label" default="Roles"/></label>
                     </td>
                     <td valign="top" class="value ${hasErrors(bean: profileInstance, field: 'roles', 'errors')}">
-                        <g:select name="roles" from="${cms.Role.list()}" multiple="yes" optionKey="id" size="5"
+                        <g:select name="roles" from="${cms.Role.list()}" multiple="yes" optionKey="id" optionValue="name" size="5"
                                   value="${profileInstance?.roles*.id}"/>
                     </td>
                 </tr>

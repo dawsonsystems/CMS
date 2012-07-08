@@ -27,7 +27,7 @@ class ProfileController {
 
     if (profileInstance.save(flush: true)) {
 
-      profileInstance.addToRoles(Role.findByName("user"))
+      profileInstance.addToRoles(Role.findByName("editor"))
 
       new LocalLogon(identifier:profileInstance.email, passwordHash: new Sha256Hash(params.password).toHex(), profile: profileInstance).save(flush:true, failOnError:true)
 
