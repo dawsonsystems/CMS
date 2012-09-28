@@ -92,6 +92,15 @@ class BootStrap {
         Role userRole = new Role(name:"editor")
         userRole.addToPermissions("profile:showCurrent")
         userRole.addToPermissions("wcmRepository:*")
+        userRole.addToPermissions("wcmPortal:*")
+        userRole.addToPermissions("wcmEditor:*")
+        userRole.addToPermissions("wcmArchive:*")
+        userRole.addToPermissions("wcmContent:*")
+        userRole.addToPermissions("wcmContentSubmission:*")
+        userRole.addToPermissions("wcmPortal:*")
+        userRole.addToPermissions("wcmSearch:*")
+        userRole.addToPermissions("wcmSynchronization:*")
+        userRole.addToPermissions("wcmWikiItemRender:*")
         userRole.save()
 
         //make a profile

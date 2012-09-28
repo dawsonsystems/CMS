@@ -15,6 +15,11 @@ class ShiroSecurityFilters {
         accessControl()
       }
     }
+    profiles(uri: "/localLogon/**") {
+      before = {
+        accessControl()
+      }
+    }
     stockAdmin(uri: "/stock/**") {
       before = {
         accessControl()

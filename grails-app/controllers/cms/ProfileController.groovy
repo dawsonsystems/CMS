@@ -7,6 +7,8 @@ class ProfileController {
 
   static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+  static navigation = [group: 'weceem.app.admin', action: 'list', title: 'Users']
+
   def index = {
     redirect(action: "list", params: params)
   }
@@ -20,6 +22,19 @@ class ProfileController {
     def profileInstance = new Profile()
     profileInstance.properties = params
     return [profileInstance: profileInstance]
+  }
+
+  def updatePassword = {
+    def profileInstance = Profile.get(params.id)
+
+    if (profileInstance) {
+      profileInstance.logins.collect { it }.each {
+        it.delete()
+      }
+      println "Removed existing logons"
+      new LocalLogon(identifier:profileInstance.email, passwordHash: new Sha256Hash(params.password).toHex(), profile: profileInstance).save(flush:true, failOnError:true)
+    }
+
   }
 
   def save = {

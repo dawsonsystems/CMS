@@ -17,6 +17,6 @@ class UrlMappings {
     "/stock/upload"(controller:"stock", action:"upload")
 
     "/profile/$action/$id?"(controller:"profile")
-
+    "/localLogon/$action?/$id?"(controller:"localLogon")
 	}
 }

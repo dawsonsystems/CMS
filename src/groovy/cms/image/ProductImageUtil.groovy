@@ -38,19 +38,9 @@ class ProductImageUtil {
 
   }
 
-
-
-
-
-
-
-
-
-
-
 }
 
-static enum ImageSize {
+enum ImageSize {
   MAIN(900,900),
   THUMB(250,250)
 

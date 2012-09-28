@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse
 class AuthController {
   def shiroSecurityManager
 
+
+
   def index = { redirect(action: "login", params: params) }
 
   def login = {

@@ -33,19 +33,19 @@
                 <g:passwordField name="password" required="" value=""/>
             </div>
 
-            <div><br/>
+           <%-- <div><br/>
                 <g:checkBox name="rememberMe" value="${rememberMe}"/>
                 <label for="rememberMe" style="font-size:smaller;">
                     <g:message code="shiroUser.rememberMe.label" default="Remember me?"/>
                 </label>
                 <br/>
-            </div>
+            </div>--%>
 
             <div><br/>
                 <g:submitButton name="signIn"
                                 value="${message(code: 'default.button.signIn.label', default: 'Sign In')}"/>
-                <br/><br/><br/><g:link action="lostPassword"><g:message code="default.lostPassword.label"
-                                                                        default="I have lost my password"/></g:link>
+                <br/><br/><br/><%--<g:link action="lostPassword"><g:message code="default.lostPassword.label"
+                                                                        default="I have lost my password"/></g:link>--%>
 
             </div>
         </fieldset>

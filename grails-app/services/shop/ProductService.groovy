@@ -1,14 +1,14 @@
 package shop
 
-import org.apache.commons.lang3.text.WordUtils
-import shop.stock.Product
-import shop.stock.ProductImage
-import uk.co.devooght.stock.ProductDTO
-import shop.stock.Sku
-import uk.co.devooght.stock.SkuDTO
-import uk.co.devooght.stock.ProductImageDTO
+//import org.apache.commons.lang3.text.WordUtils
+//import shop.stock.Product
+//import shop.stock.ProductImage
+//import uk.co.devooght.stock.ProductDTO
+//import shop.stock.Sku
+//import uk.co.devooght.stock.SkuDTO
+//import uk.co.devooght.stock.ProductImageDTO
 
-class ProductService implements uk.co.devooght.stock.ProductService {
+class ProductService /*implements uk.co.devooght.stock.ProductService*/ {
   static expose = [ 'gwt:uk.co.devooght' ]
 
   static transactional = true
@@ -17,7 +17,7 @@ class ProductService implements uk.co.devooght.stock.ProductService {
 //    return Product.list(['order':"name"])
 //  }
 //
-  List<ProductDTO> getTree() {
+ /* List<ProductDTO> getTree() {
     return Product.list(['order':"name"]).toDTO(ProductDTO)
   }
   Boolean removeProduct(ProductDTO productDTO) {
@@ -130,5 +130,5 @@ class ProductService implements uk.co.devooght.stock.ProductService {
     return dtos.sort {
       it.id
     }
-  }
+  } */
 }

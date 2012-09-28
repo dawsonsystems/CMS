@@ -43,7 +43,7 @@ grails.exceptionresolver.params.exclude = ['password']
 environments {
     production {
         grails.serverURL = "http://www.changeme.com"
- 
+
         grails.config.locations = ["file:/var/lib/tomcat7/conf/cms-datasource.groovy"]
 
         images {

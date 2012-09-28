@@ -45,15 +45,15 @@ class Basket {
   }
 
   BigDecimal getGrandTotal() {
-    return items.sum { it.lineTotal }
+    return items?.sum { it.lineTotal } ?: 0
   }
 
   BigDecimal getTotalItems() {
-    return items.sum { it.quantity }
+    return items?.sum { it.quantity }  ?: 0
   }
 
   BigDecimal getTotalProducts() {
-    return items.size()
+    return items?.size()  ?: 0
   }
 
   def afterInsert() {

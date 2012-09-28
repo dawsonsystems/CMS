@@ -61,7 +61,7 @@
                     </td>
                 </tr>
 
-                <tr class="prop">
+               <%-- <tr class="prop">
                     <td valign="top" class="name">
                         <label for="logins"><g:message code="profile.logins.label" default="Logins"/></label>
                     </td>
@@ -69,15 +69,15 @@
 
                         <ul>
                             <g:each in="${profileInstance?.logins?}" var="l">
-                                <li><g:link controller="logon" action="show"
+                                <li><g:link controller="localLogon" action="show"
                                             id="${l.id}">${l?.encodeAsHTML()}</g:link></li>
                             </g:each>
                         </ul>
-                        <g:link controller="logon" action="create"
+                        <g:link controller="localLogon" action="create"
                                 params="['profile.id': profileInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'logon.label', default: 'Logon')])}</g:link>
 
                     </td>
-                </tr>
+                </tr> --%>
 
                 <tr class="prop">
                     <td valign="top" class="name">

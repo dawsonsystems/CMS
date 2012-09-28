@@ -83,6 +83,18 @@
                                                      onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/></span>--%>
             </g:form>
         </div>
+        <div class="buttons" style="clear:left; margin-top:10px; border-top:2px solid black;">
+            <h3>Reset Password</h3>
+            <g:form action="updatePassword">
+                <g:hiddenField name="id" value="${profileInstance?.id}"/>
+                Password : <g:textField name="password"/><br/>
+                <span class="button"><input type="submit" class="save"
+                                                     value="Update Password"/></span>
+            <%--<span class="button"><g:actionSubmit class="delete" action="delete"
+      value="${message(code: 'default.button.delete.label', default: 'Delete')}"
+      onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/></span>--%>
+            </g:form>
+        </div>
     </shiro:hasPermission>
 </div>
 </body>
