@@ -1,1 +1,1 @@
-<wcm:render path="${weceemView}"/>|
+<wcm:render path="${weceemView}"/>
